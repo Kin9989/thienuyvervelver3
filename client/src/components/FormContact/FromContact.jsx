@@ -25,11 +25,11 @@ const FormContact = () => {
             'template_9rbbvgd',
             form.current, 'UHcC_8bQR3KlPcQwp')
             .then((result) => {
-                console.log(result.text);
+                // console.log(result.text);
                 alert('success')
             })
             .catch((error) => {
-                console.log(error.text);
+                // console.log(error.text);
 
                 alert('Không thể gửi email. Vui lòng thử lại sau.');
             });

@@ -28,7 +28,7 @@ const AllBlogs = () => {
             // Ensure that the response.data is an array, or set an empty array as a default value
             setBlogs(response.data || []);
         } catch (error) {
-            console.error("Error loading blogs", error);
+            console.error("Error loading blogs");
         } finally {
             setLoading(false);
         }
@@ -45,7 +45,7 @@ const AllBlogs = () => {
             if (error.response && error.response.status === 400) {
                 toast.error(error.response.data);
             }
-            console.error("Error removing blog", error);
+            console.error("Error removing blog");
         }
     };
 
