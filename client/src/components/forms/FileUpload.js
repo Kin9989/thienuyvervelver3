@@ -87,7 +87,7 @@ const FileUpload = ({ values, setValues, setLoading }) => {
 
   return (
     <>
-      <div className="d-flex flex-column mt-1">
+      <div class="d-flex flex-column mt-1">
         {values.images &&
           values.images.map((image) => (
             <Paper elevation={10} className="my-2" style={{ width: '100px', height: "100%" }}  >

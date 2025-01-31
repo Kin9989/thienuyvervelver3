@@ -25,7 +25,7 @@ const CarouselBannerHome = () => {
                         <div className="carousel-caption  d-md-block " >
                             <Link to="/shop" className="d-flex justify-content-center" style={{ marginTop: '-150px' }}>
 
-                                <button className="button-64" role="button"><span className="text">Mua Ngay</span></button>
+                                <button class="button-64" role="button"><span class="text">Mua Ngay</span></button>
 
 
                             </Link>
@@ -36,7 +36,7 @@ const CarouselBannerHome = () => {
                         <div className="carousel-caption d-none d-md-block">
                             <a href='https://www.facebook.com/thietkedankaraoke' className="d-flex justify-content-center" style={{ marginTop: '-150px' }}>
 
-                                <button className="button-64" role="button"><span className="text">Liên hệ ngay</span></button>
+                                <button class="button-64" role="button"><span class="text">Liên hệ ngay</span></button>
 
 
                             </a>

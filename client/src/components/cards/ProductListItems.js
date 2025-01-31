@@ -18,6 +18,9 @@ const ProductListItems = ({ product }) => {
     brand,
     quantity,
     sold,
+    status,
+    Guarantee,
+    Origin,
   } = product;
 
   return (
@@ -32,9 +35,36 @@ const ProductListItems = ({ product }) => {
             <TableCell align="right"> {price} VNĐ</TableCell>
           </TableRow>
 
+          <TableRow >
+            <TableCell component="th" scope="row">
+              Tình trạng sản phẩm
+            </TableCell>
+            <TableCell align="right"> {status} </TableCell>
+          </TableRow>
 
+          <TableRow >
+            <TableCell component="th" scope="row">
+              Xuất sứ
+            </TableCell>
+            <TableCell align="right"> {Origin} </TableCell>
+          </TableRow>
 
-          {category && (
+          <TableRow >
+            <TableCell component="th" scope="row">
+              Thương hiệu
+            </TableCell>
+            <TableCell align="right">{brand}</TableCell>
+
+          </TableRow>
+
+          <TableRow >
+            <TableCell component="th" scope="row">
+              Bảo hành
+            </TableCell>
+            <TableCell align="right"> {Guarantee} </TableCell>
+          </TableRow>
+
+          {/* {category && (
             // <li className="list-group-item">
             //   Category{" "}
             //   <Link
@@ -50,9 +80,9 @@ const ProductListItems = ({ product }) => {
               </TableCell>
               <TableCell align="right"><Link to={`/category/${category.slug}`}>{category.name} </Link></TableCell>
             </TableRow>
-          )}
+          )} */}
 
-          {subs && (
+          {/* {subs && (
 
             <TableRow >
               <TableCell component="th" scope="row">
@@ -70,7 +100,7 @@ const ProductListItems = ({ product }) => {
                 ))}
               </TableCell>
             </TableRow>
-          )}
+          )} */}
 
 
           <TableRow >
@@ -89,13 +119,7 @@ const ProductListItems = ({ product }) => {
 
           </TableRow>
 
-          <TableRow >
-            <TableCell component="th" scope="row">
-              Thương hiệu
-            </TableCell>
-            <TableCell align="right">{brand}</TableCell>
 
-          </TableRow>
 
           <TableRow >
             <TableCell component="th" scope="row">
@@ -105,13 +129,13 @@ const ProductListItems = ({ product }) => {
 
           </TableRow>
 
-          <TableRow >
+          {/* <TableRow >
             <TableCell component="th" scope="row">
               Đã bán ra
             </TableCell>
             <TableCell align="right">{sold}</TableCell>
 
-          </TableRow>
+          </TableRow> */}
 
         </TableBody>
       </Table>

@@ -24,7 +24,7 @@ const ScrollAnimation = () => {
 
                 </div>
             </section>
-            <section className="content" style={{ background: '#f8bbd0' }}>
+            {/* <section className="content" style={{ background: '#f8bbd0' }}>
                 <article className="content__inner">
                     <h1 className="content__title">Giới Thiệu về sản phẩm chúng tôi</h1>
                     <h3 className="content__author">Thienuyaudio.com</h3>
@@ -100,7 +100,7 @@ const ScrollAnimation = () => {
 
 
                 </article>
-            </section>
+            </section> */}
         </div>
 
 

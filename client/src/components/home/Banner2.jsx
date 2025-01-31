@@ -32,7 +32,7 @@ const Banner2 = () => {
                                         <div className="carousel-caption ">
                                             <h5>Thiên Uy audio</h5>
                                             <p>Chất lượng - Giá tốt - Bền bỉ</p>
-                                            <a hreff="https://www.facebook.com/thietkedankaraoke" > <ButtonHome>Tư vấn trực tiếp </ButtonHome></a>
+                                            <a href="https://www.facebook.com/thietkedankaraoke" > <ButtonHome>Tư vấn trực tiếp </ButtonHome></a>
 
                                         </div>
                                     </div>
@@ -41,7 +41,7 @@ const Banner2 = () => {
                                         <div className="carousel-caption ">
                                             <h5>Thiên Uy audio</h5>
                                             <p>Chất lượng đồng hành với thời gian</p>
-                                            <Link hreff="/shop" > <ButtonHome>Mua ngay</ButtonHome></Link>
+                                            <Link to="/shop" > <ButtonHome>Mua ngay</ButtonHome></Link>
 
                                         </div>
                                     </div>

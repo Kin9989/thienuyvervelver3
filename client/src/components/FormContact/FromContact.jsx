@@ -25,11 +25,11 @@ const FormContact = () => {
             'template_9rbbvgd',
             form.current, 'UHcC_8bQR3KlPcQwp')
             .then((result) => {
-                // console.log(result.text);
+                console.log(result.text);
                 alert('success')
             })
             .catch((error) => {
-                // console.log(error.text);
+                console.log(error.text);
 
                 alert('Không thể gửi email. Vui lòng thử lại sau.');
             });
@@ -87,7 +87,7 @@ const FormContact = () => {
 
                     <form className='mx-auto my-5' style={{ width: '80%' }} ref={form} onSubmit={sendEmail}>
                         <h1> Liên hệ ngay với chúng tôi</h1>
-                        <div className="form-outline mb-4">
+                        <div class="form-outline mb-4">
                             <Input
                                 id="input-with-icon-adornment"
                                 style={{ width: '100%' }}
@@ -100,7 +100,7 @@ const FormContact = () => {
                                 }
                             />
                         </div>
-                        <div className="form-outline mb-4">
+                        <div class="form-outline mb-4">
                             <Input
                                 id="input-with-icon-adornment"
                                 required
@@ -116,14 +116,14 @@ const FormContact = () => {
                         </div>
 
 
-                        <div className="form-outline mb-4">
-                            <label className="form-label" for="form4Example3">Message</label>
-                            <textarea name="message" className="form-control" id="form4Example3" rows="4"></textarea>
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form4Example3">Message</label>
+                            <textarea name="message" class="form-control" id="form4Example3" rows="4"></textarea>
 
                         </div>
 
 
-                        <button type="submit" className="btn btn-primary btn-block mb-4">Gửi</button>
+                        <button type="submit" class="btn btn-primary btn-block mb-4">Gửi</button>
                     </form>
 
                     {/* <form ref={form} onSubmit={sendEmail}>

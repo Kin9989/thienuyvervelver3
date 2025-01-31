@@ -93,13 +93,16 @@ const SingleProduct = ({ product, onStarClick, star }) => {
         </Paper>
         <Paper style={{ height: '200px', marginTop: '10px' }}>
           <Tabs type="card" >
-
-            <TabPane tab="Mô tả SP" key="1">
-              {description && description}
-            </TabPane>
-            <TabPane tab="Thông tin chi tiết" key="2">
+            <TabPane tab="Thông tin chi tiết" key="1">
               Liên hệ ngay: ................
             </TabPane>
+            <TabPane tab="Mô tả SP" key="2">
+
+              <Paper elevation={2} style={{ overflow: 'scroll' }}>
+                <div dangerouslySetInnerHTML={{ __html: description }}></div>
+              </Paper>
+            </TabPane>
+
 
           </Tabs>
         </Paper >

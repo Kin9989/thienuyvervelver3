@@ -137,7 +137,7 @@ const App = () => {
         <div className="col text-center p-5">
          
           <LoadingOutlined />
-          Vui Lòng Chờ Chúng Trong Tui Trong Giây Lát 
+          Vui Lòng Chờ Chúng Tui Trong Giây Lát 
         </div>
       }
     >

@@ -7,7 +7,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea, CardActions } from '@mui/material';
+import { Button, CardActionArea, CardActions } from '@mui/material';
 
 const CategoryList = () => {
   const [categories, setCategories] = useState([]);
@@ -15,23 +15,10 @@ const CategoryList = () => {
 
   useEffect(() => {
     setLoading(true);
-    getCategories()
-      .then((response) => {
-        const categoriesData = response.data;
-
-        if (Array.isArray(categoriesData)) {
-          setCategories(categoriesData);
-        } else {
-          console.error("Categories data is not an array:", categoriesData);
-          setCategories([]); // Set an empty array as a fallback
-        }
-
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching categories:", error);
-        setLoading(false);
-      });
+    getCategories().then((c) => {
+      setCategories(c.data);
+      setLoading(false);
+    });
   }, []);
 
   const settings = {
@@ -47,13 +34,16 @@ const CategoryList = () => {
           slidesToShow: 3,
           slidesToScroll: 1,
         },
+
       },
+
       {
         breakpoint: 1200,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
+
       },
       {
         breakpoint: 768,
@@ -72,30 +62,33 @@ const CategoryList = () => {
     ],
   };
 
-  const showCategories = () => (
-    <Slider {...settings} autoplay pauseOnFocus className="d-flex " style={{ margin: '30px', color: 'black' }}>
-      {categories.map((c) => (
-        <div className="d-flex justify-content-center mb-2" style={{ width: '100%' }} key={c._id}>
-          <Card sx={{}} style={{ width: '300px', margin: '30px' }}>
-            <CardActionArea>
-              {/* <CardMedia
-                component="img"
-                height="140"
-                // image={el.image}
-                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR9AGYk9EQ3-c4d_TAsmVmQ6jw3ffGkZpTjg&usqp=CAU"
-                alt="green iguana"
-              /> */}
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div" className="d-flex justify-content-center">
-                  <Link to={`/category/${c.slug}`} style={{ color: 'black' }}>{c.name}</Link>
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        </div>
-      ))}
-    </Slider>
-  );
+  const showCategories = () =>
+
+    <>
+      <Slider {...settings} autoplay pauseOnFocus className="d-flex " style={{ margin: '30px', color: 'black' }}>
+        {categories.map((c) => (
+          <div className="d-flex justify-content-center mb-2" style={{ width: '100%' }} key={c._id}>
+            <Card sx={{}} style={{ width: '300px' , margin:'30px' }}>
+              <CardActionArea>
+                {/* <CardMedia
+                  component="img"
+                  height="140"
+                  // image={el.image}
+                  image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR9AGYk9EQ3-c4d_TAsmVmQ6jw3ffGkZpTjg&usqp=CAU"
+                  alt="green iguana"
+                /> */}
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div" className="d-flex justify-content-center">
+                    <Link to={`/category/${c.slug}`} style={{ color: 'black' }}>{c.name}</Link>
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+
+            </Card>
+          </div>
+        ))}
+      </Slider>
+    </>
 
   return (
     <div className="container">
